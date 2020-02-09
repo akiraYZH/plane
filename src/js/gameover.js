@@ -54,8 +54,8 @@ class Gameover extends GameElement {
         game.ctx.textAlign='center';
         game.ctx.fillStyle='black';
         game.ctx.font='20px impact';
-        game.ctx.fillText(game.score, game.myCanvas.width/2+this.resumeY ,400);
-        game.ctx.fillText(game.best, game.myCanvas.width/2+this.resumeY,200);
+        game.ctx.fillText(game.score, game.myCanvas.width/2+this.resumeY ,game.myCanvas.height*0.75);
+        game.ctx.fillText(game.best, game.myCanvas.width/2+this.resumeY,game.myCanvas.height*0.4);
         game.ctx.restore()
         game.ctx.drawImage(game.imgCache["restore"], this.confirm_left, this.confirmY, this.confirm_width, this.confirm_height);
         game.ctx.restore();
