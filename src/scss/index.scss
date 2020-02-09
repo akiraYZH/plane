@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    canvas{
+        // border: 1px solid black;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        background-color: #87ceeb;
+        display: block;
+    }
+}
