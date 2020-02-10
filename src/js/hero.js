@@ -34,10 +34,15 @@ class Hero extends GameElement {
         game.myCanvas.onmousemove = function (ev) {
 
             let e = ev || window.event;
-            if (ev.clientX < $(game.myCanvas).position().left + game.bomb.x ||
+            if ((ev.clientX < $(game.myCanvas).position().left + game.bomb.x ||
                 ev.clientX > $(game.myCanvas).position().left + game.bomb.x + game.bomb.width ||
                 ev.clientY < $(game.myCanvas).position().top + game.bomb.y ||
-                ev.clientY > $(game.myCanvas).position().top + game.bomb.y + game.bomb.height) {
+                ev.clientY > $(game.myCanvas).position().top + game.bomb.y + game.bomb.height)
+                &&
+                (ev.clientX < $(game.myCanvas).position().left + game.stop_btn.x ||
+                ev.clientX > $(game.myCanvas).position().left + game.stop_btn.x + game.stop_btn.width ||
+                ev.clientY < $(game.myCanvas).position().top + game.stop_btn.y ||
+                ev.clientY > $(game.myCanvas).position().top + game.stop_btn.y + game.stop_btn.height)) {
                 this.x = e.clientX - $(game.myCanvas).offset().left - this.width / 2;
                 this.y = e.clientY - $(game.myCanvas).offset().top - this.height / 2;
             }
