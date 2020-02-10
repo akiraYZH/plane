@@ -27,17 +27,7 @@ class EnemyBullet extends GameElement {
             });
         }
 
-        // game.gameItems.forEach((obj,Index)=>{
-        //     if(obj.is_enemy==true){
-        //         if(this.x+this.width>obj.x&&
-        //             this.x<obj.x+obj.width&&
-        //             this.y<obj.y+obj.height+10&&
-        //             obj.crashed==false){
-        //                 this.hit=true;
-        //                 obj.hp--;
-        //             }
-        //     }
-        // })
+        
 
         // detect if enemy's bullet is hit
 
@@ -57,12 +47,10 @@ class EnemyBullet extends GameElement {
     }
     render() {
 
-        // game.ctx.save();
-
 
 
         game.ctx.drawImage(game.imgCache[this.img], this.x, this.y, this.width, this.height);
-        // game.ctx.restore();
+
 
 
     }

@@ -32,7 +32,8 @@
     "stop":"../img/stop.png",
     "return":"../img/return.png",
     "gameover":"../img/resume.png",
-    "restore":"../img/restore.png"
+    "restore":"../img/restore.png",
+    "bomb":"../img/bomb.png"
     
     
 }

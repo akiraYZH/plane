@@ -133,8 +133,9 @@ class Game {
     start() {
         this.hero = new Hero();
         this.stop_btn = new Stop();
+        this.bomb = new Bomb();
         
-        this.myCanvas.onclick = this.stop.bind(this);
+        this.myCanvas.onclick = this.clickable.bind(this);
 
         this.enemy1_timer = setInterval(() => {
             new Enemy1();
@@ -155,7 +156,11 @@ class Game {
         this.score = 0;
 
     }
-
+    clickable(ev){
+        this.stop(ev);
+        this.bomb.bomb(ev);
+    }
+    // game stops
     stop(ev) {
 
         var ev = ev || window.event;
@@ -200,5 +205,6 @@ class Game {
         }
         
     }
+
 
 }
