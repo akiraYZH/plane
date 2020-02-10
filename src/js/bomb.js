@@ -6,7 +6,7 @@ class Bomb extends GameElement {
         this.width = game.myCanvas.width * 63 / 480;
         this.height = game.myCanvas.width * 53 / 480;
         this.x = 10;
-        this.y = game.myCanvas.height - this.height - 40;
+        this.y = game.myCanvas.height - this.height - 60;
         this.num = 3;
         this.n1 = this.n2=parseInt(game.score/100);
         this.is_click =false;
@@ -41,7 +41,7 @@ class Bomb extends GameElement {
         game.ctx.save();
         game.ctx.font='16px Arial';
         game.ctx.fillStyle='black';
-        game.ctx.fillText(this.num,this.x+20, this.y+this.height+20);
+        game.ctx.fillText(this.num,this.x+this.width*0.5, this.y+this.height+20);
         game.ctx.restore();
         }
         
